@@ -1,0 +1,146 @@
+{
+  "expo": {
+    "name": "SuperAgent",
+    "slug": "agentrouter-mobile",
+    "version": "1.1.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "jarvis",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "org.lyric.agentrouter",
+      "versionCode": 10105,
+      "allowBackup": false,
+      "adaptiveIcon": {
+        "backgroundColor": "#262624",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "softwareKeyboardLayoutMode": "resize",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "category": [
+            "DEFAULT"
+          ],
+          "data": [
+            {
+              "mimeType": "application/pdf"
+            },
+            {
+              "mimeType": "text/*"
+            },
+            {
+              "mimeType": "application/json"
+            },
+            {
+              "mimeType": "application/xml"
+            },
+            {
+              "mimeType": "image/jpeg"
+            },
+            {
+              "mimeType": "image/png"
+            },
+            {
+              "mimeType": "image/gif"
+            },
+            {
+              "mimeType": "image/webp"
+            },
+            {
+              "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            },
+            {
+              "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            },
+            {
+              "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+            }
+          ]
+        }
+      ],
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#262624",
+          "dark": {
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#262624"
+          }
+        }
+      ],
+      [
+        "expo-sqlite",
+        {
+          "android": {
+            "useSQLCipher": true
+          }
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "SuperAgent needs your photo library to attach an image to a message. Attachments stay on this device until you press send."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "SuperAgent uses the camera so you can photograph something and ask about it. The photo stays on this device until you press send.",
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "SuperAgent uses the microphone to dictate a message. Audio is transcribed and never sent anywhere until you press send.",
+          "speechRecognitionPermission": "SuperAgent uses speech recognition to turn what you say into text you can edit before sending."
+        }
+      ],
+      "./plugins/with-no-backup.js",
+      "./plugins/with-system-ca-only.js"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1203a4d2-78ca-407d-a3fb-058ee83ceb50"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/1203a4d2-78ca-407d-a3fb-058ee83ceb50"
+    },
+    "ios": {
+      "bundleIdentifier": "org.lyric.agentrouter",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    }
+  }
+}
